@@ -14,7 +14,7 @@ const weather_api = (lat, long, callback) => {
             celcius = celcius.toFixed(2)
             let cloud = body.clouds.all
             let wea = body.weather[0].description
-            let string = 'iT is' + " " + celcius + ' degree C and cloud cover is ' + cloud + ' % and it is ' + wea
+            let string = 'iT is' + " " + celcius + ' degree C and cloud cover is ' + cloud + ' % and it is ' + wea + ".The maximum temperature is " + body.main.temp_max + " degrees C  and the minimum temperature is " + body.main.temp_min + " degree C"
             callback(undefined, string)
         }
     })
